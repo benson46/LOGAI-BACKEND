@@ -11,8 +11,10 @@ const PORT = process.env.PORT || 5000;
 
 // middlewares
 app.use(cors({
-  origin:[process.env.CORS_ORIGIN,process.env.CORS_ORIGIN2]
+  origin: [process.env.CORS_ORIGIN, process.env.CORS_ORIGIN2],
+  methods: ["GET", "POST", "PUT", "DELETE"],
 }));
+
 app.use(express.json());
 
 // routes
