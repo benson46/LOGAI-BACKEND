@@ -16,6 +16,9 @@ app.use(express.json());
 // routes
 app.use('/api/customer',router);
 
+app.get('/', (req, res) => {
+  res.send('Welcome to the Customer API');
+});
 
 app.listen(5000, () => {
   console.log(`Server is running on port ${PORT}`);
