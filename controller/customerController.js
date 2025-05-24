@@ -2,6 +2,7 @@ import Customer from "../model/customerModel.js";
 
 const getCustomers = async (req, res) => {
     try {
+        console.log("Fetching customers with query:", req.query);
         const {search = "",state,country,page = 1,limit = 10} = req.query;
         const filter = {
             name: {$regex: search, $options: "i"},
